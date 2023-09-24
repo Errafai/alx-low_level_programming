@@ -11,11 +11,11 @@
 
 int _strlen(const char *str)
 {
-	        int i = 0;
+	int i = 0;
 
-		        while(str[i])
-				                i++;
-			        return (i);
+	while(str[i])
+		i++;
+	return (i);
 }
 
 /**
@@ -43,7 +43,7 @@ list_t *add_node_end(list_t **head, const char *str)
 		tail = *head;
 		while (tail->next)
 			tail = tail->next;
-		tail = new;
+		tail->next = new;
 	}
 	return (new);
 }
