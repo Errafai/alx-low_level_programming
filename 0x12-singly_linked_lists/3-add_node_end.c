@@ -4,16 +4,16 @@
 #include "lists.h"
 
 /**
- * *_strlen - calcule le long d'un string
- * *@str: the string
- * *Return: the length of the string
- * */
+ *_strlen - calcule le long d'un string
+ *@str: the string
+ *Return: the length of the string
+ */
 
 int _strlen(const char *str)
 {
 	int i = 0;
 
-	while(str[i])
+	while (str[i])
 		i++;
 	return (i);
 }
@@ -26,8 +26,8 @@ int _strlen(const char *str)
  */
 list_t *add_node_end(list_t **head, const char *str)
 {
-	list_t* new;
-	list_t* tail;
+	list_t *new;
+	list_t *tail;
 
 	new = malloc(sizeof(list_t));
 	if (new == NULL)
