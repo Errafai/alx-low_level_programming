@@ -4,10 +4,11 @@
  *delete_nodeint_at_index - delets a node at an index of a
  *@head: the head of the list
  *@index: the index of the node
+ *Return: 1 0r -1
  */
 int delete_nodeint_at_index(listint_t **head, unsigned int index)
 {
-	listint_t *temp, *old , *prev;
+	listint_t *temp, *old, *prev;
 	unsigned int i;
 
 	if (*head == NULL)
