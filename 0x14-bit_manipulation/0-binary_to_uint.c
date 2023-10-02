@@ -10,7 +10,7 @@ unsigned int binary_to_uint(const char *b)
 
 	for (i = 0; b && *b; b++)
 	{
-		if (*b != '0' || *b != '1')
+		if (*b != '0' && *b != '1')
 			return (0);
 		i <<= 1;
 		i += *b -'0';
