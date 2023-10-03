@@ -56,8 +56,8 @@ int main(int argc, char *argv[])
 	printf("  Type:                              %s\n",
 		   	       header->e_type == ET_EXEC ? "EXEC (Executable file)" : "EXEC (Executable file)");
 	printf("  Entry point address:               0x%lx (bytes into file)\n", header->e_entry);
-	printf("  Start of program headers:          %d (bytes into file)\n", header->e_phoff);
-	printf("  Start of section headers:          %d (bytes into file)\n", header->e_shoff);
+	printf("  Start of program headers:          %ld (bytes into file)\n", header->e_phoff);
+	printf("  Start of section headers:          %ld (bytes into file)\n", header->e_shoff);
 	printf("  Flags:                             0x%x\n", header->e_flags);
 	printf("  Size of this header:               %d (bytes)\n", header->e_ehsize);
 	printf("  Size of program headers:           %d (bytes)\n", header->e_phentsize);
