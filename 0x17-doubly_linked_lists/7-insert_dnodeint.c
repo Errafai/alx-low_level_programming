@@ -34,7 +34,7 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 }
 
 /**
- * dlistint_len - #include "lists.h"
+ * listint_len - #include "lists.h"
  * @h: the head of the DDl
  * Return: the number of nodes in DDL
  */
