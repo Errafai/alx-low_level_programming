@@ -1,7 +1,7 @@
 #include "hash_tables.h"
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
-	hash_node_t *new_node, *curr;
+	hash_node_t *new_node, *temp;
 	unsigned int index = key_index((const unsigned char *)key, ht->size);
 
 	new_node = malloc(sizeof(hash_node_t));
@@ -25,10 +25,9 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	}
 	else
 	{
-		curr = ht->array[index];
-		while(curr->next)
-			curr = curr->next;
-		curr->next = new_node;
+		 temp = ht->array[index];
+		 ht->array[index] = new_node;
+		 new_node->next = temp;
 	}
 	return (1);
 
