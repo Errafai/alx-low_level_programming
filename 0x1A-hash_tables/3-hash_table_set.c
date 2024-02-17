@@ -11,7 +11,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	hash_node_t *new_node, *temp;
 	unsigned int index = key_index((const unsigned char *)key, ht->size);
 
-	if (srtcmp(key, "")
+	if (srtcmp(key, ""))
 		return (0);
 	new_node = malloc(sizeof(hash_node_t));
 	if (new_node == NULL)
