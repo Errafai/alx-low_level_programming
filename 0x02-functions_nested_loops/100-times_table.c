@@ -7,7 +7,7 @@ void print_times_table(int n)
 {
 	int i = 0, j;
 
-	if (n >= 15 || n <= 0)
+	if (n >= 15 || n < 0)
 		return;
 	while (i <= n)
 	{
@@ -47,6 +47,6 @@ void _atoi(int n)
 	else
 	{
 		_atoi(n / 10);
-		putchar(n % 10 + '0');
+		_putchar(n % 10 + '0');
 	}
 }
