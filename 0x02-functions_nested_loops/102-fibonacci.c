@@ -7,11 +7,11 @@ int main(void)
 {
 	long int fibn_1 = 1, fibn_2 = 0, fibn = 0, i = 0;
 
-	while (i <= 50)
+	while (i < 50)
 	{
 		fibn = fibn_1 + fibn_2;
 		printf("%ld", fibn);
-		if (i != 50)
+		if (i != 49)
 			printf(", ");
 		else
 			printf("\n");
