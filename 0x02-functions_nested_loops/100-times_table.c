@@ -1,4 +1,8 @@
 #include "main.h"
+/**
+ * print_times_table - print the product table of a number
+ * @n: the number
+ */
 void print_times_table(int n)
 {
 	int i = 0, j;
@@ -13,30 +17,33 @@ void print_times_table(int n)
 			_atoi(j * i);
 			if (j != n)
 			{
-				putchar(',');
-				putchar(' ');
+				_putchar(',');
+				_putchar(' ');
 				if ((j + 1) * i <= 99)
-					putchar(' ');
+					_putchar(' ');
 				if ((j + 1) * i <= 9)
-					putchar(' ');
+					_putchar(' ');
 			}
 			else
-				putchar('\n');
+				_putchar('\n');
 			j++;
 		}
-		putchar('\n');
 		i++;
 	}
 }
+/**
+ * _atoi - print a number using putchar
+ * @n: the number
+ */
 void _atoi(int n)
 {
 	if (n < 0)
 	{
-		putchar('-');
+		_putchar('-');
 		n = -n;
 	}
 	if (n <= 9 && n >= 0)
-		putchar(n + '0');
+		_putchar(n + '0');
 	else
 	{
 		_atoi(n / 10);
