@@ -1,21 +1,22 @@
 #include "main.h"
-
-int _strlen(char *dest)
-{
-	int i = 0;
-
-	while (dest[i])
-		i++;
-	return (i);
-}
-
+/**
+ * _strcat - concatnate two strings dest+src
+ * @dest: the destination code
+ * @src:the source code
+ * Return: the pointer to the new string dest
+ */
 char *_strcat(char *dest, char *src)
 {
-	int i;
-	int n = _strlen(dest);
+	int i, j;
+	int n;
 
-	for (i = n;!src[i]; i++)
-		dest[i] = src[i - n];
+	for (n = 0; dest[n] != '\0'; n++)
+	{
+	}
+	for (i = n, j = 0; src[j] != '\0'; i++, j++)
+		dest[i] = src[j];
+
 	dest[i] = '\0';
+
 	return (dest);
 }
