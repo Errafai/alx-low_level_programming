@@ -1,4 +1,9 @@
 #include "main.h"
+/**
+ * leet - encodes a string into 1337
+ * @h: the string
+ * Return: the new string
+ */
 char *leet(char *h)
 {
 	char a[][2] = {
